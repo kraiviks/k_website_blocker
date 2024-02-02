@@ -1,0 +1,42 @@
+{
+  "name": "k_website_blocker",
+  "workspaces": [
+    "./apps/*"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "concurrently \" npm run start:dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev --workspace=@k_website_blocker/client",
+    "build:client": "npm run build --workspace=@k_website_blocker/client",
+    "start:client": "npm run start --workspace=@k_website_blocker/client",
+    "api:download:client": "npm run api:download --workspace=@k_website_blocker/client",
+    "api:generate:client": "npm run api:generate --workspace=@k_website_blocker/client",
+    "build:server": "npm run server --workspace=@k_website_blocker/server",
+    "start:server": "npm run start --workspace=@k_website_blocker/server",
+    "start:dev:server": "npm run start:dev --workspace=@k_website_blocker/server",
+    "start:debug:server": "npm run start:debug --workspace=@k_website_blocker/server",
+    "start:prod:server": "npm run start:prod --workspace=@k_website_blocker/server",
+    "test:server": "npm run test --workspace=@k_website_blocker/server",
+    "test:watch:server": "npm run test:watch --workspace=@k_website_blocker/server",
+    "test:cov:server": "npm run test:cov --workspace=@k_website_blocker/server",
+    "test:debug:server": "npm run test:debug --workspace=@k_website_blocker/server",
+    "test:e2e:server": "npm run test:e2e --workspace=@k_website_blocker/server",
+    "lint": "npm run lint --workspaces",
+    "format": "npm run lint --workspaces"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraiviks/k_website_blocker.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kraiviks/k_website_blocker/issues"
+  },
+  "homepage": "https://github.com/kraiviks/k_website_blocker#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
