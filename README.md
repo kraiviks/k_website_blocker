@@ -1,4 +1,4 @@
-# website-blocker
+# k_website_blocker
 
 ## Run the project
 
